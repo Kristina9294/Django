@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}СборникРецептов{% endblock %}
+{% block page_content %}
+<h1>Сборник рецептов</h1>
+{% if recipe %}
+    {% for i in recipe %}
+    <div class="alert alert-success nt-2">
+        <h2>{{i.title}}</h2>
+        <a href="{% url 'main_detail' i.pk %}">Подробнее</a>
+    </div>
+    {% endfor %}
+{% else %}
+<p>Нет рецептов</p>
+{% endif %}
+{% endblock %}

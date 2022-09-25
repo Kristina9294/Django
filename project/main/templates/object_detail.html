@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Recept{% endblock %}
+{% block page_content %}
+                <h1>Рецепт</h1>
+                <p>{{recept.title}}</p>
+                <br>
+                <h2>Ингредиенты</h2>
+                <p>{{recept.products}}</p>
+                <h2>Приготовление</h2>
+                <p>{{recept.context}}
+{% endblock %}

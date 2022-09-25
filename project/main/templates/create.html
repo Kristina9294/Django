@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}CreateRecipe{% endblock %}
+{% block page_content %}
+    <div class="container">
+    <h1>Добавление рецепта</h1>
+    <form method='post'>
+        {% csrf_token %}
+        {{form.title}}
+        {{form.products}}
+        {{form.context}}
+        <button type="submit" class="btn btn-primary mt-2">Добавить</button>
+        <span>{{error}}</span>
+    </form>
+    </div>
+{% endblock %}
